@@ -76,7 +76,7 @@ body {
 }
 
 .main-logo {
-    max-width: 150px;
+    max-width: 250px;
     height: auto;
     display: block;
 }
@@ -88,8 +88,8 @@ h1 {
     margin: 0.5rem auto;
     padding-right: 5px;
 
-    /* Gradient Shine */
-    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    /* Gradient Shine - White/Silver */
+    background: linear-gradient(to right, #ffffff, #e0e0e0, #ffffff, #f0f0f0, #dcdcdc);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -102,14 +102,11 @@ h1 {
     max-width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid var(--accent-color);
-    /* Cursor */
 
     /* Animation definition */
     animation:
         shine 3s linear infinite,
-        typing 3.5s steps(30, end) forwards,
-        blink-caret .75s step-end infinite;
+        typing 3.5s steps(30, end) forwards;
 }
 
 @keyframes shine {
@@ -125,18 +122,6 @@ h1 {
 
     to {
         width: 100%
-    }
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: var(--accent-color)
     }
 }
 
