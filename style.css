@@ -127,7 +127,7 @@ body {
 }
 
 .main-logo {
-    width: 220px;
+    width: 250x;
     height: auto;
     filter: drop-shadow(0 0 5px rgba(242, 208, 107, 0.5));
     margin-bottom: 1rem;
@@ -135,27 +135,26 @@ body {
 
 h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(2rem, 8vw, 3.5rem);
-    /* Responsive font size */
-    color: var(--accent-color);
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    color: #ffffff;
+    /* Shiny White */
     margin-bottom: 1.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
+    /* Glow effect */
     font-weight: 400;
+    font-style: italic;
+    /* Explicit cursive style */
 
     /* Typewriter styles */
     display: inline-block;
     overflow: hidden;
-    border-right: .15em solid var(--accent-color);
     white-space: nowrap;
     margin: 0 auto 1.5rem auto;
     letter-spacing: .05em;
-    animation:
-        typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
+    animation: typing 4s steps(40, end);
     max-width: 0;
     animation-fill-mode: forwards;
     animation-delay: 0.5s;
-    padding-right: 10px;
 }
 
 /* The typing effect */
@@ -168,19 +167,6 @@ h1 {
     to {
         width: 100%;
         max-width: 100%;
-    }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: var(--accent-color);
     }
 }
 
