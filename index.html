@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essenza Stetica - Invitación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Audio Background -->
+    <audio id="bg-music" loop>
+        <source src="assets/aaa.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Intro Screen -->
+    <div id="intro-screen">
+        <div class="intro-content">
+            <div class="pulse-circle"></div>
+            <p>Click para abrir</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="hidden">
+        <div class="card">
+            <header id="header" class="fade-in-element">
+                <div class="logo-container">
+                    <!-- Placeholder for logo or icon -->
+                    <svg class="clover-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2C12 2 14 6 17 6C20 6 22 4 22 7C22 10 18 12 18 12C18 12 22 14 22 17C22 20 20 22 17 22C14 22 12 18 12 18C12 18 10 22 7 22C4 22 2 20 2 17C2 14 6 12 6 12C6 12 2 10 2 7C2 4 4 6 7 6C10 6 12 2 12 2Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h1>Essenza Stetica</h1>
+            </header>
+
+            <section id="message">
+                <p class="highlight-text fade-in-element delay-1">Te invito a la inauguración de mi estética,</p>
+                <p class="fade-in-element delay-2">un pedacito de sueño hecho realidad.</p>
+                <p class="fade-in-element delay-3">Será muy especial compartir este momento contigo.</p>
+            </section>
+
+            <button id="details-btn" class="btn-primary fade-in-element delay-4">Ver más detalles</button>
+
+            <div id="details-section" class="hidden-section">
+                <div class="info-block">
+                    <h3>Dirección</h3>
+                    <p>Av. Amazonas y la Granja</p>
+                    <p>Edificio El Ejecutivo of. 302</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Fecha y Hora</h3>
+                    <p>Sábado 29 de noviembre del 2025</p>
+                    <p>10:00 AM</p>
+                </div>
+
+                <div id="actions">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Av.+Amazonas+y+la+Granja+Edificio+El+Ejecutivo"
+                        target="_blank" class="btn-secondary action-btn">
+                        <span>📍</span> Ver Dirección
+                    </a>
+                    <a href="https://wa.me/593968923402" target="_blank" class="btn-secondary action-btn">
+                        <span>💬</span> Confirmar en WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
