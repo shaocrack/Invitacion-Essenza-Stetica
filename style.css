@@ -1,7 +1,8 @@
 :root {
     --primary-color: #0a3d35;
     /* Emerald Green */
-    --accent-color: #d4af37;
+    --accent-color: #f2d06b;
+    /* Lighter Gold */
     /* Gold */
     --text-color: #f0fdfa;
     --bg-overlay: rgba(10, 61, 53, 0.85);
@@ -58,23 +59,23 @@ body {
     border-radius: 50%;
     margin: 0 auto 20px;
     animation: pulse 2s infinite;
-    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    box-shadow: 0 0 0 0 rgba(242, 208, 107, 0.7);
 }
 
 @keyframes pulse {
     0% {
         transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+        box-shadow: 0 0 0 0 rgba(242, 208, 107, 0.7);
     }
 
     70% {
         transform: scale(1);
-        box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
+        box-shadow: 0 0 0 20px rgba(242, 208, 107, 0);
     }
 
     100% {
         transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+        box-shadow: 0 0 0 0 rgba(242, 208, 107, 0);
     }
 }
 
@@ -100,10 +101,10 @@ body {
     padding: 2rem;
     border-radius: 20px;
     border: 1px solid var(--accent-color);
+    box-shadow: 0 5px 15px rgba(242, 208, 107, 0.3);
     text-align: center;
     max-width: 90%;
     width: 400px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
     max-height: 90vh;
@@ -118,31 +119,75 @@ body {
 .card::-webkit-scrollbar-thumb {
     background-color: var(--accent-color);
     border-radius: 3px;
+    color: #e0e0e0;
 }
 
 .logo-container {
-    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
-.clover-icon {
-    width: 60px;
-    height: 60px;
-    filter: drop-shadow(0 0 5px var(--accent-color));
+.main-logo {
+    width: 220px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(242, 208, 107, 0.5));
+    margin-bottom: 1rem;
 }
 
 h1 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    color: #fff;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    /* Responsive font size */
+    color: var(--accent-color);
     margin-bottom: 1.5rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+
+    /* Typewriter styles */
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid var(--accent-color);
+    white-space: nowrap;
+    margin: 0 auto 1.5rem auto;
+    letter-spacing: .05em;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    max-width: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    padding-right: 10px;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+        max-width: 0;
+    }
+
+    to {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--accent-color);
+    }
 }
 
 #message {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: #e0e0e0;
 }
 
@@ -168,13 +213,14 @@ h1 {
     transition: all 0.3s ease;
     border-radius: 50px;
     font-family: var(--font-body);
+    margin-top: 1rem;
 }
 
 .btn-primary:hover {
     background: var(--accent-color);
     color: var(--primary-color);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 5px 15px rgba(242, 208, 107, 0.3);
 }
 
 /* Details Section */
@@ -184,7 +230,7 @@ h1 {
     transform: translateY(20px);
     transition: all 0.5s ease;
     margin-top: 2rem;
-    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    border-top: 1px solid rgba(242, 208, 107, 0.3);
     padding-top: 2rem;
 }
 
