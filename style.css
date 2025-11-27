@@ -1,11 +1,11 @@
 :root {
-    --primary-color: #0a3d35;
+    --primary-color: #24575c;
     /* Emerald Green */
     --accent-color: #f2d06b;
     /* Lighter Gold */
     /* Gold */
     --text-color: #f0fdfa;
-    --bg-overlay: rgba(10, 61, 53, 0.85);
+    --bg-overlay: rgba(36, 87, 92, 0.85);
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Outfit', sans-serif;
 }
