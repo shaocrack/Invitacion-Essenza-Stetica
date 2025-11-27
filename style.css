@@ -48,6 +48,19 @@ body {
     transition: opacity 1s ease;
 }
 
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.main-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
 .intro-content {
     text-align: center;
 }
@@ -116,66 +129,20 @@ body {
     width: 6px;
 }
 
+.card::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
 .card::-webkit-scrollbar-thumb {
-    background-color: var(--accent-color);
-    border-radius: 3px;
-    color: #e0e0e0;
+    background: var(--accent-color);
+    border-radius: 10px;
 }
 
-.logo-container {
-    margin-bottom: 1rem;
+.card::-webkit-scrollbar-thumb:hover {
+    background: #d4b04b;
 }
 
-.main-logo {
-    width: 250x;
-    height: auto;
-    filter: drop-shadow(0 0 5px rgba(242, 208, 107, 0.5));
-    margin-bottom: 1rem;
-}
-
-h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(2.5rem, 10vw, 5rem);
-    color: #ffffff;
-    /* Shiny White */
-    margin-bottom: 1.5rem;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
-    /* Glow effect */
-    font-weight: 400;
-    font-style: italic;
-    /* Explicit cursive style */
-
-    /* Typewriter styles */
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto 1.5rem auto;
-    letter-spacing: .05em;
-    animation: typing 4s steps(40, end);
-    max-width: 0;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-}
-
-/* The typing effect */
-@keyframes typing {
-    from {
-        width: 0;
-        max-width: 0;
-    }
-
-    to {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-#message {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 3rem;
-    color: #e0e0e0;
-}
 
 .highlight-text {
     color: var(--accent-color);
@@ -262,18 +229,22 @@ h1 {
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+
 .visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+
 .delay-1 {
     transition-delay: 1.0s;
 }
 
+
 .delay-2 {
     transition-delay: 2.0s;
 }
+
 
 .delay-3 {
     transition-delay: 3.0s;
@@ -281,4 +252,34 @@ h1 {
 
 .delay-4 {
     transition-delay: 4.0s;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .card {
+        width: 95%;
+        padding: 1.5rem;
+        max-height: 85vh;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .highlight-text {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .btn-primary {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .main-logo {
+        max-width: 120px;
+    }
 }
